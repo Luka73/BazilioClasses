@@ -6,8 +6,9 @@ public class Program {
     public static void main(String[] args) {
         String optionAccount = "";
         boolean loop = true;
+
         SavingAccount savingAccount = new SavingAccount(100, 0.5);
-        CheckingAccount checkingAccount = new CheckingAccount(20, 0.2);
+        CheckingAccount checkingAccount = new CheckingAccount(0, 0.2);
 
         while (true) {
             String optionBankMenu = Menu.getBankMenuOption();

@@ -1,15 +1,15 @@
 package Entities;
 
-public abstract class BankingAccount {
-    protected double startingBalance;
+public abstract class BankingAccount { //criação
+    protected double startingBalance; // --> 0
     protected double currentBalance;
-    protected double totalOfDeposits;
-    protected int numberOfDeposits;
+    protected double totalOfDeposits; // --> quanto de dinheiro $130
+    protected int numberOfDeposits; // --> quantidade 3
     protected double totalOfWithdrawals;
     protected int numberOfWithdrawals;
     protected double annualInterestRate;
     protected double monthlyServiceCharge;
-    protected boolean activeAccount;
+    protected boolean activeAccount; // --> se a conta está ativa ou não
 
     public BankingAccount(double startingBalance, double annualInterestRate) {
         this.startingBalance = startingBalance;

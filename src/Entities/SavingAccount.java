@@ -10,14 +10,7 @@ public class SavingAccount extends BankingAccount {
         accountStatus();
     }
 
-    @Override
-    public void makeWithdraw(double amount) {
-        if(activeAccount)
-            super.makeWithdraw(amount);
-
-        accountStatus();
-    }
-
+    //sobreescrita
     public void makeDeposit(double amount) {
         if(!activeAccount && (currentBalance + amount) > 25)
             activeAccount = true;
@@ -26,6 +19,13 @@ public class SavingAccount extends BankingAccount {
             super.makeDeposit(amount);
         else
             System.out.println("Inactive account");
+    }
+
+    public void makeWithdraw(double amount) {
+        if(activeAccount)
+            super.makeWithdraw(amount);
+
+        accountStatus();
     }
 
     public void doMonthlyReport() {
