@@ -11,8 +11,10 @@ public class CheckingAccount extends BankingAccount {
     }
 
     public void makeWithdraw(double amount) {
-        if(amount > currentBalance)
+        if(amount > currentBalance) {
             currentBalance -= WITHDRAWALS_CHARGE;
+            System.out.println("Not enough balance. Charges were applied.");
+        }
         else
             super.makeWithdraw(amount);
 

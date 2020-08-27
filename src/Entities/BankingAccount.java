@@ -38,18 +38,15 @@ public abstract class BankingAccount {
     public void doMonthlyReport() {
         currentBalance -= monthlyServiceCharge;
         calculateInterest();
-        numberOfWithdrawals = 0;
-        numberOfDeposits = 0;
-        monthlyServiceCharge = 0;
-    }
 
-    public void report() {
-        System.out.println("Starting balance: " + startingBalance);
-        System.out.println("Total of deposits: " + totalOfDeposits);
-        System.out.println("Total of withdrawals: " + totalOfWithdrawals);
-        System.out.println("Service charges: " + monthlyServiceCharge);
-        System.out.println("Current balance: " + currentBalance);
-        System.out.println("Account status: " + activeAccount);
+        String accountStatus = (activeAccount) ? "Active" : "Inactive";
+
+        System.out.printf("Starting balance: %.2f \n" , startingBalance);
+        System.out.printf("Total of deposits: %.2f \n" , totalOfDeposits);
+        System.out.printf("Total of withdrawals: %.2f \n" , totalOfWithdrawals);
+        System.out.printf("Service charges: %.2f \n" , monthlyServiceCharge);
+        System.out.printf("Current balance: %.2f \n" , currentBalance);
+        System.out.println("Account status: " + accountStatus);
 
         startingBalance = currentBalance;
 
@@ -58,6 +55,7 @@ public abstract class BankingAccount {
         numberOfDeposits = 0;
         totalOfWithdrawals = 0;
         numberOfWithdrawals = 0;
+        monthlyServiceCharge = 0;
         monthlyServiceCharge = 0;
     }
 

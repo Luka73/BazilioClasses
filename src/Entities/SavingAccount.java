@@ -24,6 +24,8 @@ public class SavingAccount extends BankingAccount {
 
         if(activeAccount)
             super.makeDeposit(amount);
+        else
+            System.out.println("Inactive account");
     }
 
     public void doMonthlyReport() {
@@ -36,6 +38,6 @@ public class SavingAccount extends BankingAccount {
     }
 
     private void accountStatus() {
-        activeAccount = !(startingBalance <= 25);
+        activeAccount = startingBalance > 25 || currentBalance > 25;
     }
 }

@@ -23,7 +23,7 @@ public class Menu {
         return sc.next().toUpperCase();
     }
 
-    public static void accountMenu(String optionAccount, BankingAccount bankingAccount ) {
+    public static boolean accountMenu(String optionAccount, BankingAccount bankingAccount) {
         Scanner sc = new Scanner(System.in);
         if(optionAccount.equalsIgnoreCase("A")) {
             System.out.println("Enter deposit amount: ");
@@ -35,7 +35,10 @@ public class Menu {
             bankingAccount.makeWithdraw(amount);
         } else if (optionAccount.equalsIgnoreCase("C")) {
             bankingAccount.doMonthlyReport();
-            bankingAccount.report();
+        } else {
+            return false;
         }
+
+        return true;
     }
 }
