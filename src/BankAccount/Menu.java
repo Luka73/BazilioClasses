@@ -1,6 +1,6 @@
-package Utils;
+package BankAccount.Utils;
 
-import Entities.BankingAccount;
+import BankAccount.Entities.BankingAccount;
 import java.util.Scanner;
 
 public class Menu {

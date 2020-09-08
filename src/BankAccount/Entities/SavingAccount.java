@@ -1,4 +1,4 @@
-package Entities;
+package BankAccount.Entities;
 
 public class SavingAccount extends BankingAccount {
 

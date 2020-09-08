@@ -1,4 +1,4 @@
-package Entities;
+package BankAccount.Entities;
 
 public abstract class BankingAccount { //criação
     protected double startingBalance; // --> 0

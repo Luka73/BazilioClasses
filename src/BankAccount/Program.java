@@ -1,6 +1,8 @@
-import Entities.CheckingAccount;
-import Entities.SavingAccount;
-import Utils.Menu;
+package BankAccount;
+
+import BankAccount.Entities.CheckingAccount;
+import BankAccount.Entities.SavingAccount;
+import BankAccount.Utils.Menu;
 
 public class Program {
     public static void main(String[] args) {
