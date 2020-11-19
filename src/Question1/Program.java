@@ -30,14 +30,12 @@ public class Program {
             }
 
             Product product = new Product(id, name);
-            if(!productsFile.contains(product)) {
+            if(!productsFile.contains(product)) { // ! --> NOT
                 productSet.add(product);
             }
         }
 
         FileUtils.writeFile(fileName, productSet);
-
-
     }
 
 }

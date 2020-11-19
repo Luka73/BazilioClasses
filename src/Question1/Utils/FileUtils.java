@@ -7,6 +7,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class FileUtils {
+
     public static void createFile(String name) {
         try {
             File myObj = new File(name);

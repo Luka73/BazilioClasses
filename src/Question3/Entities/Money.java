@@ -31,7 +31,7 @@ public class Money {
         int cents = this.cents + addition.cents;
         euros = euros + (cents / 100.0);
 
-        int intPart = (int) euros;
+        int intPart = (int) euros; //casting
         int decimalPart = (int) ((euros - intPart) * 100);
         //System.out.println("Integer Part: " + intPart);
         //System.out.println("Decimal Part: " + decimalPart);

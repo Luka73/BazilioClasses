@@ -51,17 +51,7 @@ public class SimpleDate {
 
     public void advance(int days) {
         for(int i = 1; i <= days; i++) {
-            if (day == 30) {
-                if (month == 12) {
-                    year++;
-                    month = 1;
-                } else {
-                    month++;
-                    day = 1;
-                }
-            } else {
-                day++;
-            }
+            advance();
         }
     }
 
